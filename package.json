@@ -1,0 +1,23 @@
+{
+  "name": "j-shell",
+  "version": "1.0.0",
+  "description": "A wrapper around shelljs to make javascript shell scripting seamless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shell",
+    "linux",
+    "unix",
+    "sh",
+    "script"
+  ],
+  "author": "Darkenvy",
+  "license": "ISC",
+  "dependencies": {
+    "builtin-modules": "^2.0.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.2"
+  }
+}
