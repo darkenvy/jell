@@ -1,6 +1,6 @@
-#!/Users/renomckenzie/.nvm/versions/node/v10.1.0/bin/node
-require = require('./index')();
-const fs = require('fs');
-const express = require('express');
+#!/usr/bin/env node
+const $ = require('./index3');
+const express = $.require('express');
+// const express = require('express');
 
-console.log('here-------', Object.keys(fs));
+console.log('done', express)
