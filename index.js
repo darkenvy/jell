@@ -5,15 +5,15 @@ module.exports = (() => {
   const shell = require('shelljs');
   const builtinModules = require('builtin-modules');
   
-  const NAME = 'j-Shell';
-  const JSHELL = path.join(os.homedir(), '.jshell_modules');
+  const NAME = 'jell';
+  const JSHELL = path.join(os.homedir(), '.${NAME}_modules');
   const JSHELL_MODULES = path.join(JSHELL, 'node_modules');
   
   // if first ran, create directory
   if (!fs.existsSync(JSHELL_MODULES)) shell.mkdir(JSHELL_MODULES);
   
   // merge specified modules with this module's scope
-  const selfModules = ['fs-extra', 'shelljs'];
+  const selfModules = ['fs', 'shelljs'];
   let $ = {};
   selfModules.forEach(mod => {
     $ = Object.assign($, require(mod));
@@ -22,7 +22,6 @@ module.exports = (() => {
   // include is the require replacement
   $.include = function() {
     const moduleName = arguments[0];
-    console.log('---', moduleName);
   
     // If builtin modules, just import directly. Otherwise, [install &] prepend $HOME path
     const isBuiltInModule = builtinModules.indexOf(moduleName) !== -1;
