@@ -15,7 +15,7 @@
   },
   "preferGlobal": true,
   "dependencies": {
-    "express": "1.0.0",
+    "express": "3.11.0",
     "moment": "^2.24.0"
   }
 }
