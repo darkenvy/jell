@@ -13,9 +13,5 @@
     "test": "yarn clean && yarn interpret-test",
     "test:prod": "cd test && ./index.sh"
   },
-  "preferGlobal": true,
-  "dependencies": {
-    "express": "1.0.0",
-    "moment": "^2.24.0"
-  }
+  "preferGlobal": true
 }
