@@ -1,23 +1,21 @@
 {
   "name": "jell",
-  "version": "1.0.0",
-  "description": "A wrapper around require & shelljs to make javascript shell scripting seamless",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "A shebang interpreter for nodeJS!",
+  "version": "2.0.0",
+  "main": "bin/jell.js",
+  "license": "GPL-3.0-or-later",
+  "bin": {
+    "jell": "./bin/jell.js"
   },
-  "keywords": [
-    "shell",
-    "linux",
-    "unix",
-    "sh",
-    "script"
-  ],
-  "author": "Darkenvy",
-  "license": "MIT License",
+  "scripts": {
+    "clean": "rm -rf test/node_modules/",
+    "interpret-test": "bin/jell.js test/index.sh",
+    "test": "yarn clean && yarn interpret-test",
+    "test:prod": "cd test && ./index.sh"
+  },
+  "preferGlobal": true,
   "dependencies": {
-    "builtin-modules": "^2.0.0",
-    "path": "^0.12.7",
-    "shelljs": "^0.8.2"
+    "express": "1.0.0",
+    "moment": "^2.24.0"
   }
 }
