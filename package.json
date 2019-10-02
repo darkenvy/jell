@@ -3,6 +3,7 @@
   "description": "A shebang interpreter for nodeJS!",
   "version": "2.0.0",
   "main": "bin/jell.js",
+  "author": "Darkenvy",
   "license": "GPL-3.0-or-later",
   "bin": {
     "jell": "./bin/jell.js"
@@ -13,5 +14,21 @@
     "test": "yarn clean && yarn interpret-test",
     "test:prod": "cd test && ./index.sh"
   },
-  "preferGlobal": true
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/darkenvy/jell.git"
+  },
+  "preferGlobal": true,
+  "keywords": [
+    "shebang",
+    "script",
+    "scripting",
+    "shell",
+    "bash",
+    "node",
+    "nodejs",
+    "sh",
+    "javascript",
+    "js"
+  ]
 }
